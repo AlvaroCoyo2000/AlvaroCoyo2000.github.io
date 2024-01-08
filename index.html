@@ -104,13 +104,10 @@
               </button>
             </a>
         </section>
-        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <!-- Nucleo de firebase INDISPENSABLE- -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
+  <!-- Añadimos los productos de auth y base de datos  -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
 
@@ -126,7 +123,7 @@
   appId: "1:914350632095:web:1aacb4706c3528acd786aa"
 	};
 
-	// Initialize Firebase
+	// Inicializamos firebase
     firebase.initializeApp(firebaseConfig);
 
   </script>
@@ -140,7 +137,7 @@
   		user_image 		= document.getElementById("user_image"),
   		user_name_h1 	= document.getElementById("user_name");
 
-  	//iniciar con Google
+  	//iniciar con Facebook
   	var loginFacebook = function(){
 
   	   //proveedor de inicio - Facebook
@@ -148,21 +145,22 @@
 
 
   		firebase.auth().signInWithPopup(provider).then(function(result) {
-  		  // This gives you a Google Access Token. You can use it to access the Google API.
+  		  // Token de google usado para el acceso simulaneo
   		  var token = result.credential.accessToken;
-  		  // The signed-in user info.
+  		  // Una vez iniciada la sesion pararemos a tomar los datos del usuario
   		  var user = result.user;
-
+			//Si funciona, imprimimos el nombre del usuario
   		  console.log(user.displayName);
-  		  updateUser(user);
+			//redirigimos a nuestra pagina MAIN
+  		  redireccionamiento(user);
   		  // ...
   		}).catch(function(error) {
-  		  // Handle Errors here.
+  		  // Cachamos errores
   		  var errorCode = error.code;
   		  var errorMessage = error.message;
-  		  // The email of the user's account used.
+  		  // Error de email
   		  var email = error.email;
-  		  // The firebase.auth.AuthCredential type that was used.
+  		  // Error de credencial
   		  var credential = error.credential;
   		  // ...
 
@@ -171,25 +169,8 @@
   	}
 
   	//agregar datos del usuario
-  	var updateUser = function(user){
-  		user_name_h1.innerHTML = "Hola, " + user.displayName;
-  		user_image.src = user.photoURL;
-
-  		login_btn.style.display = "none";
-  		logout_btn.style.display = "inline-block";
-  	}
-
-  	var logout = function(){
-  		firebase.auth().signOut().then(function() {
-		  	user_name_h1.innerHTML = "Acceso";
-		  	user_image.src = "assets/images/JimeCoding.jpg";
-  			login_btn.style.display = "inline-block";
-  			logout_btn.style.display = "none";
-
-		}).catch(function(error) {
-		  // An error happened.
-		});
-
+  	var redireccionamiento = function(user){
+  		location.href="main.html";
   	}
 
   </script>
