@@ -148,11 +148,11 @@
   		  // Token de google usado para el acceso simulaneo
   		  var token = result.credential.accessToken;
   		  // Una vez iniciada la sesion pararemos a tomar los datos del usuario
-  		  var usuario = result.user;
+  		  var user = result.user;
 			//Si funciona, imprimimos el nombre del usuario
-  		  console.log(usuario.displayName);
+  		  console.log(user.displayName);
 			//redirigimos a nuestra pagina MAIN
-  		  redireccionamiento(usuario);
+  		  redireccionamiento(user);
   		  // ...
   		}).catch(function(error) {
   		  // Cachamos errores
@@ -169,7 +169,7 @@
   	}
 
   	//Redireccionamos
-  	var redireccionamiento = function(usuario){
+  	var redireccionamiento = function(user){
   		location.href="main.html";
   	}
 
