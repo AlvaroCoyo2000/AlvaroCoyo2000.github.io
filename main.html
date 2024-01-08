@@ -52,7 +52,7 @@
     <header>
       <h1>Sesión</h1>
       <div class="herramientas">
-        <button
+        <button onclick="logout()"
           type="button"
           name="terminarSesión">
           Terminar Sesión
@@ -86,5 +86,14 @@
   <script type="module"
     src="js/CtrlSesion.js">
     </script>
+  <script> 
+    var logout = function(){
+    		firebase.auth().signOut().then(function() {
+  		  	location.href="index.html";
+  		}).catch(function(error) {
+  		  // Algun error 
+  		});
+  	}
+  </script>
 </body>
 </html>
