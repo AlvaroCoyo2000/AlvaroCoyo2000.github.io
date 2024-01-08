@@ -28,7 +28,19 @@
 </head>
 <body>
   <form name="forma">
-    <mi-nav></mi-nav>
+    <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="alumno.html">Alumno</a>
+            </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sesion y Accesos</a>
+              <ul class="dropdown-menu">
+                <mi-nav></mi-nav>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" onclick="logout()">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+          </ul>
     <header>
       <h1>Alumno</h1>
       <div class="herramientas">
