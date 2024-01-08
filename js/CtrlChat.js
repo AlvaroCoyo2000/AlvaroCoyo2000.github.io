@@ -146,14 +146,20 @@ function htmlFila(doc) {
    * codifican para evitar
    * inyección de código. */
   return ( /* html */
-    `<li class="fila">
-      <strong class="primario">
-        ${cod(data.usuarioId)}
-      </strong>
-      <span class="secundario">
-        ${cod(data.texto)}
-      </span>
-    </li>`);
+    `
+    <div class="card">
+      <div class="card-body">
+        <li class="fila">
+          <strong class="primario">
+            ${cod(data.usuarioId)}
+          </strong>
+          <span class="secundario">
+            ${cod(data.texto)}
+          </span>
+        </li>
+      </div>
+    </div>
+    `);
 }
 
 /** Función que se invoca cuando
