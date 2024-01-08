@@ -11,12 +11,12 @@ import {
 class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
-      `<ul>
+      `
         <li>
-          <a href="main.html">
+          <a class="dropdown-item" href="main.html">
             Sesión</a>
         </li>
-      </ul>`;
+      `;
     this.ul =
       this.querySelector("ul");
     getAuth().onAuthStateChanged(
@@ -38,7 +38,7 @@ class MiNav extends HTMLElement {
      if (roles.has("Cliente")) {
         html += /* html */
           `<li>
-            <a href=
+            <a class="dropdown-item" href=
               "chat.html">Chat</a>
           </li>`;
       }
@@ -46,7 +46,7 @@ class MiNav extends HTMLElement {
         "Administrador")) {
         html += /* html */
           `<li>
-            <a href=
+            <a class="dropdown-item" href=
 "alumnos.html">Alumnos</a>
           </li>`;
       }
