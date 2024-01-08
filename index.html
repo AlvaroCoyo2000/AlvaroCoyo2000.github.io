@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina De Bienvenida</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            flex-direction: column;
+            top: 0;
+            z-index: 1000;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .boton {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        #azul {
+            background-color: #3498db;
+        }
+
+        #gris {
+            background-color: #95a5a6;
+        }
+
+        .boton:hover {
+            background-color: #2c3e50;
+        }
+        footer{
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #95a5a6; /* Color de fondo de Google */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button img {
+            width: 40px; /* Ajusta el tamaño de los logotipos según sea necesario */
+            margin-right: 10px; /* Ajusta el espacio entre el logo y el texto del botón */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenid@ Al Sistema!</h1>
+    </header>
+        <br><br><br><br>
+        <section>
+            <p>Para poder acceder debes de autenticarte primero</p>
+            <p>Selecciona a continuacion como quieres autenticarte.</p>
+            <br>
+            <a href="main.html">
+            <button>
+                <img src="img/facebook-logo.png" alt="Facebook Logo">
+                Iniciar sesión con Facebook
+              </button>
+            </a>
+              <br><br>
+              <a href="main.html">
+              <button class="facebook" href="">
+                <img src="img/google-logo.png" alt="Google Logo">
+                Iniciar sesión con Google
+              </button>
+            </a>
+        </section>
+        
+</body>
+<footer style="background-color: azure; color: black; width: 100%;">
+    Alvaro Coyotecatl 2022601770    
+</footer>
+</html>
