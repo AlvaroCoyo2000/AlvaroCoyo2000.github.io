@@ -90,6 +90,15 @@
     </p>
     <mi-footer></mi-footer>
   </form>
+  <script> 
+    var logout = function(){
+    		firebase.auth().signOut().then(function() {
+  		  	location.href="index.html";
+  		}).catch(function(error) {
+  		  // Algun error 
+  		});
+  	}
+  </script>
   <script type="module"
     src="js/CtrlAlumno.js">
     </script>
