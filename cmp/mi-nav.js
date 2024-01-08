@@ -11,12 +11,12 @@ import {
 class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
-      `
+      `<ul class="dropdown-menu">
         <li>
           <a class="dropdown-item" href="main.html">
             Sesión</a>
         </li>
-      `;
+      </ul>`;
     this.ul =
       this.querySelector("ul");
     getAuth().onAuthStateChanged(
