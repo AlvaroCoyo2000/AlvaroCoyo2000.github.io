@@ -30,7 +30,19 @@
     href="css/estilos.css">
 </head>
 <body>
-  <mi-nav></mi-nav>
+  <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">CHAT</a>
+            </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sesion y Accesos</a>
+              <ul class="dropdown-menu">
+                <mi-nav></mi-nav>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" onclick="logout()">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+          </ul>
   <form name="forma">
     <header>
       <h1>Chat</h1>
