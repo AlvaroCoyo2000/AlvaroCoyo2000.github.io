@@ -12,8 +12,8 @@ class MiNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* html */
       `<ul>
-        <li class="nav-item">
-          <a nav-link href="main.html">
+        <li>
+          <a href="index.html">
             Sesión</a>
         </li>
       </ul>`;
@@ -37,16 +37,16 @@ class MiNav extends HTMLElement {
           usu.email);
      if (roles.has("Cliente")) {
         html += /* html */
-          `<li class="nav-item">
-            <a nav-link href=
+          `<li>
+            <a href=
               "chat.html">Chat</a>
           </li>`;
       }
       if (roles.has(
         "Administrador")) {
         html += /* html */
-          `<li class="nav-item">
-            <a nav-link href=
+          `<li>
+            <a href=
 "alumnos.html">Alumnos</a>
           </li>`;
       }
